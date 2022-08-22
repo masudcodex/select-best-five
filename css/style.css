@@ -10,6 +10,9 @@ body{
     font-family: 'Berkshire Swash', cursive;;
     color: #FF5E19;
 }
+.players {
+    width: 80%;
+}
 .card-heading {
     font-size: 32px;
     font-weight: bold;
@@ -25,11 +28,13 @@ body{
     letter-spacing: 1.5px;
 }
 .right-sidebar{
-    width: 21%;
     color: #AFAFAF;
+    padding: 15px 0;
+}
+.right-sidebar-top, .right-sidebar-bottom {
+    padding: 15px 30px;
 }
 .perPlayer-btn, .calculateTotal-btn{
-    width: 80%;
     background-color: #015196;
     color: #FFFFFF;
     font-weight: bold;
