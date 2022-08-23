@@ -1,25 +1,28 @@
 const playerList = [];
 
+
 function displayPlayer(player){
     const playerNameList = document.getElementById('player-list');
     playerNameList.innerText = '';
-    for (let i = 0; i < player.length; i++) {
-        const playerSingleName = player[i].playerName;
+    for (let i = 0; i < playerList.length; i++) {
+        const playerSingleName = playerList[i].playerName;
         const li = document.createElement('li');
         li.innerText = `${playerSingleName}`;
+       
         if (i <= 4) {
             playerNameList.appendChild(li);
         }else {
             alert('You can not select more than 5 Players');
-        }      
+            playerList.removeAttribute('disabled');
+        }
+            
     }
-    return playerNameList;
+    return;
 }
 
 
 function selectPlayer(element){
     const playerName = element.parentNode.children[0].innerText;
-    const playerSelectBtn = document.querySelectorAll('select-btn');
     const playerObj = {
         playerName: playerName
     }
@@ -28,7 +31,6 @@ function selectPlayer(element){
 
 }
 
-// Players Expense Calculate
 
 document.getElementById('per-player-expense').addEventListener('click', function(){
 
